@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+$(function() {
+    $(".btn1").on("click", function () {
+        var ts = $(this);
+        if(ts.text() == "숨김") {
+            $(".wrap").slideUp(1000, function() {
+                $(".btn1").text("글자나오게한다");
+            });
+        }else{
+            $(".wrap").slideDown(1000, function() {
+                $(".btn1").text("숨길수있다");
+            });
+        }
+    });
+})
+</script>
+
+</head>
+<body>
+    <p class="btnWrap">
+        <button class="btn1">숨김</button>
+    </p>
+    <div class="wrap">
+        <p class="txt1">내용1</p>
+        <p class="txt2">내용2</p>
+    </div>
+</body>
+</html>
